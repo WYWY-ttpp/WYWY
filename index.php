@@ -21,6 +21,16 @@ if ( sizeof($request_array['events']) > 0 ) {
         $reply_token = $event['replyToken'];
 
         $text = $event['message']['text'];
+        
+        $a = '';
+        
+        if($text=='ชอบเจ้าหญิงองค์ไหนคะ'){
+            $a = 'สโนว์ไวท์นจ้ะ';
+        }
+        else{
+             $a = 'ฉันชอบเจ้าชาย';
+        }
+        
         $data = [
             'replyToken' => $reply_token,
             // 'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]  Debug Detail message
